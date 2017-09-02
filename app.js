@@ -6,6 +6,19 @@ var bodyParser = require('body-parser');
 var customerRouter = require('./customerRouter');
 var productRouter = require('./productRouter');
 var invoicesRouter = require('./invoicesRouter');
+var mongoose = require('mongoose');
+
+mongoose.connect("mongodb://localhost:27017/inventory");
+
+var db = mongoose.connection;
+
+db.on('error', function(err) {
+    console.error("eror connection database : " + err);
+})
+
+db.once('open', function(){
+    console.log("database connection established");
+})
 
 var app = express();        
 app.use(logger("dev"));
