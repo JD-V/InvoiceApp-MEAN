@@ -20,7 +20,7 @@ db.once('open', function(){
     console.log("database connection established");
 })
 
-var app = express();        
+var app = express();
 app.use(logger("dev"));
 app.use(bodyParser.json());
 

@@ -10,9 +10,11 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.13.4",
+    "lodash": "^4.17.4",
     "mongodb": "^2.2.31",
     "mongoose": "^4.4.20",
-    "morgan": "^1.7.0"
+    "morgan": "^1.7.0",
+    "passport-http-bearer": "^1.0.1"
   },
   "license": "ISC"
 }
